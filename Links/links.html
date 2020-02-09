@@ -95,9 +95,6 @@
                <div class="col-md-9">
                <h2>Copyright</h2>
                </div>
-               <div class="col-md-3" style="text-align: right">
-               <a class="btn btn-outline-dark" id="btn5" style="text-align: center">Copy</a>
-               </div>
                <p name="text" class="form-control" style="background-color: #ebeef2; margin-top: 15px; border-radius:10px; width:100%" id="txt5"> Copyright 2020 The Nikitron Author. All rights reserved. Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.</p>
                </div>
           </div>
@@ -264,27 +261,6 @@ function Ascroll() {
   button.addEventListener('click', function () {
     //нашли наш контейнер
     var ta = document.getElementById('txt4');
-    //производим его выделение
-    var range = document.createRange();
-    range.selectNode(ta);
-    window.getSelection().addRange(range);
-
-    //пытаемся скопировать текст в буфер обмена
-    try {
-      document.execCommand('copy');
-    } catch(err) {
-      console.log('Can`t copy, boss');
-    }
-    //очистим выделение текста, чтобы пользователь "не парился"
-    window.getSelection().removeAllRanges();
-  });
-</script>
-<script>
-  //цепляем событие на onclick кнопки
-  var button = document.getElementById('btn5');
-  button.addEventListener('click', function () {
-    //нашли наш контейнер
-    var ta = document.getElementById('txt5');
     //производим его выделение
     var range = document.createRange();
     range.selectNode(ta);
